@@ -1,6 +1,9 @@
 # MicroNinjas - Organoid Sorting
 
+<img src="https://github.com/alandolt/organoid-shuffler/blob/master/images/microninjas.png" width="300"/>
+
 *EMBO Hackathon Hack your Microscope 2026 in Oeiras, Portugal*
+
 This project was developed during a hands-on hackathon focused on building open, functional microscopy and microfluidic systems from the ground up. The goal was not just to prototype ideas, but to design, build, and test complete working pipelines under real constraints.
 
 Participants: Alex Landolt, Mai Rahmoon, Olyssa Sperling, Kartik Totlani, Enrico Piperno
@@ -20,14 +23,13 @@ The task required:
 We built a closed-loop system that integrates: flow → image → classify → actuate → verify
 
 ## Brainstorming
-
-![image](images/chip_design.png)
+<img src="https://github.com/alandolt/organoid-shuffler/blob/master/images/chip_design.png" width="600"/>
 
 ## Fabrication of microfluidic chip
 
-![image](images/lasercutting1.png)
+<img src="https://github.com/alandolt/organoid-shuffler/blob/master/images/lasercutting1.png" width="600"/>
 
-![image](images/soft_lithography.png)
+<img src="https://github.com/alandolt/organoid-shuffler/blob/master/images/soft_lithography.png" width="600"/>
 
 ## Experimental setup
 The final experimental setup consists of:
@@ -37,14 +39,14 @@ The final experimental setup consists of:
 The parts are connected using silicon and teflon tubing.
 
 ## Microfluidic actuation
-![image](images/actuation.png)
+<img src="https://github.com/alandolt/organoid-shuffler/blob/master/images/actuation.png" width="600"/>
 We actuated our microfluidic chips with the [open-source Poseidon design](https://github.com/pachterlab/poseidon). 
 We wrote custom scripts to actuate the stepper motors and then calibrated the pumps to convert from steps to mm (travel stage dependent) and then mm to ml (syringe dependent). 
-![image](images/sorting.png)
+<img src="https://github.com/alandolt/organoid-shuffler/blob/master/images/sorting.png" width="600"/>
 This way we were able control flow precisely up to 1 ul/s. The pump control was done manually first with cnc_stepper_motor.py and cnc_stepper_motor.ino flashed on the Arduino UNO. 
 
 ## Image analysis
-![image](images/image_analysis.png)
+<img src="https://github.com/alandolt/organoid-shuffler/blob/master/images/image_analysis.png" width="600"/>
 Using the syringe pumps we achieved a controlled flow of organoids through the chip that was imaged in real-time at 1 f/s. 
 In order to use the pipeline, please follow the instructions in the notebook Pipeline.ipynb, which will guide you through the different steps of the pipeline.
 The pipeline does the following steps:
@@ -58,7 +60,7 @@ The pipeline does the following steps:
 * The flow in the chip is controlled by setting a flowrate of 0.001 ml/min in the pump that controls the flow rate in the chip (the one connected to the inlet). You can directly set the flowrate through the jupyter notebook.
 
 ## Results
-![image](images/results.png)
+[![](https://img.youtube.com/vi/6NS1tuH9CTA/0.jpg)](https://youtu.be/6NS1tuH9CTA "Click to play on Youtube.com")
 
 ## Discussion
 The organoids were smaller and rarer than expected since the sample was very dilute. 
@@ -66,3 +68,5 @@ The organoids were smaller and rarer than expected since the sample was very dil
 In the end we managed to find some, train the classification model on them and start the sorting procedure.
 
 In the future we can use the speed calculation in order to calculate the time of the organoid reaching the end of the tubing, matching the exact time for the organoid to drop into the sorting Eppendorf tubings.
+
+<img src="https://github.com/alandolt/organoid-shuffler/blob/master/images/sketch.png" width="600"/>
