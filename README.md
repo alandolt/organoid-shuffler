@@ -17,13 +17,17 @@ The task required:
 * Actively sorting them into multiple outlets
 * Closing the loop with automated control and verification
 
-We built a closed-loop system that integrates:
-
-flow → image → classify → actuate → verify
+We built a closed-loop system that integrates: flow → image → classify → actuate → verify
 
 ## Brainstorming
 
+![image](images/chip_design.png)
+
 ## Fabrication of microfluidic chip
+
+![image](images/lasercutting1.png)
+
+![image](images/soft_lithography.png)
 
 ## Experimental setup
 The final experimental setup consists of:
@@ -33,11 +37,14 @@ The final experimental setup consists of:
 The parts are connected using silicon and teflon tubing.
 
 ## Microfluidic actuation
+![image](images/actuation.png)
 We actuated our microfluidic chips with the [open-source Poseidon design](https://github.com/pachterlab/poseidon). 
 We wrote custom scripts to actuate the stepper motors and then calibrated the pumps to convert from steps to mm (travel stage dependent) and then mm to ml (syringe dependent). 
+![image](images/sorting.png)
 This way we were able control flow precisely up to 1 ul/s. The pump control was done manually first with cnc_stepper_motor.py and cnc_stepper_motor.ino flashed on the Arduino UNO. 
 
 ## Image analysis
+![image](images/image_analysis.png)
 Using the syringe pumps we achieved a controlled flow of organoids through the chip that was imaged in real-time at 1 f/s. 
 In order to use the pipeline, please follow the instructions in the notebook Pipeline.ipynb, which will guide you through the different steps of the pipeline.
 The pipeline does the following steps:
@@ -49,6 +56,9 @@ The pipeline does the following steps:
 * If an organoid is detected that is bigger than 100 pixels in the field of view, it moves it to eppendorf slot 1 for 30s, otherwise it moves it to slot 0.
 * All detections and sorting decisions are logged in a parquet file for later analysis.
 * The flow in the chip is controlled by setting a flowrate of 0.001 ml/min in the pump that controls the flow rate in the chip (the one connected to the inlet). You can directly set the flowrate through the jupyter notebook.
+
+## Results
+![image](images/results.png)
 
 ## Discussion
 The organoids were smaller and rarer than expected since the sample was very dilute. 
