@@ -30,12 +30,12 @@ The final experimental setup consists of:
 
 * one automatable syringe pump by the [Poseidon design](https://github.com/pachterlab/poseidon)
 * a [microfluidic chip by IBIDI](https://ibidi.com/channel-slides/50--slide-i-luer.html) mounted on an [OpenFrame fluorescence microscope](https://cairn-research.co.uk/product/openframe-microscope/) by cairn research
-* the sorting mechanism crafted by a one-axis translation stage, and a 3D printed 0.5 ml Eppendorf tube adapter.
+* the sorting mechanism crafted by a one-axis translation stage, and a 3D printed 0.5 ml [Eppendorf tube adapter](eppendorf_0.5ml_adapter.stl).
 The parts are connected using silicon and teflon tubing.
 
 ## Microfluidic actuation
 <img src="https://github.com/alandolt/organoid-shuffler/blob/master/images/actuation.png" width="600"/>
-We actuated our microfluidic chips with the [open-source Poseidon design](https://github.com/pachterlab/poseidon). 
+We actuated our microfluidic chips with the open-source Poseidon design. 
 We wrote custom scripts to actuate the stepper motors and then calibrated the pumps to convert from steps to mm (travel stage dependent) and then mm to ml (syringe dependent). 
 <img src="https://github.com/alandolt/organoid-shuffler/blob/master/images/sorting.png" width="600"/>
 This way we were able control flow precisely up to 1 ul/s. The pump control was done manually first with cnc_stepper_motor.py and cnc_stepper_motor.ino flashed on the Arduino UNO. 
