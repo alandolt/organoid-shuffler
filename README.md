@@ -1,8 +1,8 @@
 # MicroNinjas - Organoid Sorting
 
-<img src="https://github.com/alandolt/organoid-shuffler/blob/master/images/microninjas.png" width="300"/>
+<img align="right" src="https://github.com/alandolt/organoid-shuffler/blob/master/images/microninjas.png" width="200"/>
 
-*EMBO Hackathon Hack your Microscope 2026 in Oeiras, Portugal*
+*EMBO Hackathon Hack your Microscope 2026 in Oeiras, Portugal.*
 
 This project was developed during a hands-on hackathon focused on building open, functional microscopy and microfluidic systems from the ground up. The goal was not just to prototype ideas, but to design, build, and test complete working pipelines under real constraints.
 
@@ -22,18 +22,13 @@ The task required:
 
 We built a closed-loop system that integrates: flow → image → classify → actuate → verify
 
-## Brainstorming
-<img src="https://github.com/alandolt/organoid-shuffler/blob/master/images/chip_design.png" width="600"/>
-
-## Fabrication of microfluidic chip
-
-<img src="https://github.com/alandolt/organoid-shuffler/blob/master/images/lasercutting1.png" width="600"/>
-
-<img src="https://github.com/alandolt/organoid-shuffler/blob/master/images/soft_lithography.png" width="600"/>
+## [Brainstorming and Fabrication of microfluidic chip](https://github.com/alandolt/organoid-shuffler/blob/master/Microfluids1x1.md)
 
 ## Experimental setup
+<img src="https://github.com/alandolt/organoid-shuffler/blob/master/images/experimental_setup.png" width="600"/>
 The final experimental setup consists of:
-* automatable syringe pumps by the [Poseidon design](https://github.com/pachterlab/poseidon)
+
+* one automatable syringe pump by the [Poseidon design](https://github.com/pachterlab/poseidon)
 * a [microfluidic chip by IBIDI](https://ibidi.com/channel-slides/50--slide-i-luer.html) mounted on an [OpenFrame fluorescence microscope](https://cairn-research.co.uk/product/openframe-microscope/) by cairn research
 * the sorting mechanism crafted by a one-axis translation stage, and a 3D printed 0.5 ml Eppendorf tube adapter.
 The parts are connected using silicon and teflon tubing.
@@ -60,7 +55,7 @@ The pipeline does the following steps:
 * The flow in the chip is controlled by setting a flowrate of 0.001 ml/min in the pump that controls the flow rate in the chip (the one connected to the inlet). You can directly set the flowrate through the jupyter notebook.
 
 ## Results
-[![](https://img.youtube.com/vi/6NS1tuH9CTA/0.jpg)](https://youtu.be/6NS1tuH9CTA "Click to play on Youtube.com")
+[![](https://img.youtube.com/vi/Kiy7haI36f4/0.jpg)](https://youtu.be/Kiy7haI36f4 "Click to play on Youtube.com")
 
 ## Discussion
 The organoids were smaller and rarer than expected since the sample was very dilute. 
@@ -70,3 +65,4 @@ In the end we managed to find some, train the classification model on them and s
 In the future we can use the speed calculation in order to calculate the time of the organoid reaching the end of the tubing, matching the exact time for the organoid to drop into the sorting Eppendorf tubings.
 
 <img src="https://github.com/alandolt/organoid-shuffler/blob/master/images/sketch.png" width="600"/>
+Sketch generated using ChatGPT that very accurately represents our setup.
